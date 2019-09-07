@@ -1,9 +1,8 @@
 <script>
-$('.new-lesson-button').click(function( event ) {
-  var lessonUrl = $( event.target).data('lesson-url');
-  $('#newLessonForm').attr('action', lessonUrl);
-});
-
+  $(function() {
+    $('.new-lesson-button').click(function() {
+      alert('hello!');
+    });
 
     $('.lessons').sortable({
       update: function( event, ui ) {
@@ -27,6 +26,8 @@ $('.new-lesson-button').click(function( event ) {
         });
       }
     });
+
+  });
 </script>
 
 <br />
