@@ -52,10 +52,9 @@ $('.new-lesson-button').click(function( event ) {
         </div>
 
         <!-- LESSON trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#newLessonModal">
-          Add a new lesson...
+        <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+          New Lesson...
         </button>
-
         <br class="clr" />
         <br class="clr" />
         
@@ -120,7 +119,7 @@ $('.new-lesson-button').click(function( event ) {
         </button>
         <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
       </div>
-      <%= simple_form_for @lesson, url: "#" do |f| %>
+      <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
         <div class="modal-body">
           <%= f.input :title %>
           <%= f.input :subtitle %>
